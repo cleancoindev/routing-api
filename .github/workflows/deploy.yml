@@ -29,6 +29,9 @@ jobs:
 
       - name: Build
         run: npm run build
+      
+      - name: Bootstrap
+        run: cdk bootstrap --require-approval never
 
       - name: Deploy
         run: npm run deploy:force
