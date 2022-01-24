@@ -15,6 +15,8 @@
     "test": "ts-mocha -p tsconfig.cdk.json test/unit test/cdk",
     "integ-test": "ts-mocha -p tsconfig.cdk.json -r dotenv/config test/integ/**/*.test.ts",
     "cdk": "cdk",
+    "synth": "cdk synth",
+    "deploy": "cdk deploy RoutingAPIStack",
     "fix": "run-s fix:*",
     "fix:prettier": "prettier \"lib/**/*.ts\" --write",
     "fix:lint": "eslint lib --ext .ts --fix"
