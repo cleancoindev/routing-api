@@ -32,11 +32,12 @@ jobs:
       
       - name: Bootstrap
         run: cdk bootstrap --require-approval never
-
-      - name: Deploy
-        run: npm run deploy:force
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           AWS_REGION: eu-central-1
+
+      - name: Deploy
+        run: npm run deploy:force
+        env:
           PROJECT_ID: ${{ secrets.PROJECT_ID }}
