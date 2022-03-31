@@ -112,7 +112,6 @@ export abstract class InjectorSOR<Router, QueryParams> extends Injector<
         //const url = `https://${chainName}.infura.io/v3/${projectId}`
         const url = 'https://eth-mainnet.alchemyapi.io/v2/UJRnTQUbHEDtcyuPTVo_QJ2bHBot-7XF'
 
-
         let timeout: number
         switch (chainId) {
           case ChainId.ARBITRUM_ONE:
