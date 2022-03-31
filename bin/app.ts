@@ -139,7 +139,6 @@ export class RoutingAPIPipeline extends Stack {
     const betaUsEast2AppStage = pipeline.addApplicationStage(betaUsEast2Stage)
 
     this.addIntegTests(pipeline, sourceArtifact, betaUsEast2Stage, betaUsEast2AppStage)
-    
 
     // Prod us-east-2
     const prodUsEast2Stage = new RoutingAPIStage(this, 'prod-us-east-2', {
