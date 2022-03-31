@@ -6,7 +6,7 @@ import {
   CachingV3PoolProvider,
   ChainId,
   EIP1559GasPriceProvider,
-  ID_TO_NETWORK_NAME,
+  // ID_TO_NETWORK_NAME,
   IGasPriceProvider,
   IMetric,
   ITokenListProvider,
@@ -106,10 +106,12 @@ export abstract class InjectorSOR<Router, QueryParams> extends Injector<
 
     const dependenciesByChainArray = await Promise.all(
       _.map(SUPPORTED_CHAINS, async (chainId: ChainId) => {
-        const chainName = ID_TO_NETWORK_NAME(chainId)
+        //const chainName = ID_TO_NETWORK_NAME(chainId)
         // updated chainNames to match infura strings
-        const projectId = process.env.PROJECT_ID
-        const url = `https://${chainName}.infura.io/v3/${projectId}`
+        //const projectId = process.env.PROJECT_ID
+        //const url = `https://${chainName}.infura.io/v3/${projectId}`
+        const url = 'https://eth-mainnet.alchemyapi.io/v2/UJRnTQUbHEDtcyuPTVo_QJ2bHBot-7XF'
+
 
         let timeout: number
         switch (chainId) {
