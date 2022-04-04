@@ -110,8 +110,6 @@ export abstract class InjectorSOR<Router, QueryParams> extends Injector<
         // updated chainNames to match infura strings
         const projectId = process.env.PROJECT_ID
         const url = `https://${chainName}.infura.io/v3/${projectId}`
-        // const mainnet_alchemy_url = 'https://eth-mainnet.alchemyapi.io/v2/UJRnTQUbHEDtcyuPTVo_QJ2bHBot-7XF'
-        // const rinkeby_alchemy_url = 'https://eth-rinkeby.alchemyapi.io/v2/dFf9_vm0UXd5XE5bTmT9MS_S_TwRtOyk';
 
         let timeout: number
         switch (chainId) {
